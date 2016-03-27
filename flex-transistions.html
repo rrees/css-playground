@@ -1,0 +1,56 @@
+<style>
+body {
+	background-color: grey
+	}
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 5s all;
+    height: 100vh;
+    width: 100%
+}
+.information-display {
+    font-size: 2rem;
+    margin: auto;
+    transition: 2s all;
+    background-color: lightgray;
+    border: 1px solid black;
+    min-height: 5rem;
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.button-bar {
+    margin: auto;
+    min-height: 4rem;
+}
+.action-button {
+    font-size: 1.5rem;
+}
+.prominent {
+    flex: 2;
+}
+
+</style>
+
+<section class="panel">
+<div class="information-display">
+    <p class="message">This is the display text</p>
+</div>
+<div class="button-bar"><button class="action-button">I am action</button></div>
+</section>
+
+<script>
+    const buttons = document.getElementsByClassName('action-button');
+    Array.prototype.forEach.call(buttons, (el) => {
+        console.log(el);
+        el.addEventListener('click', () => {
+            const classes = document.getElementsByClassName('information-display')[0].classList;
+            classes.toggle('prominent');
+        });
+     });
+
+
+</script>
