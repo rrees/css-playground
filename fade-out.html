@@ -1,0 +1,29 @@
+
+<html>
+  <head>
+    <style>
+      .s-fade-out {
+        visibility: hidden;
+        pointer-events: none;
+        opacity: 0;
+        transition: visibility 0s 2s, opacity 2s linear, height 2s;
+      }
+    </style>
+  </head>
+
+  <body>
+
+
+    <p>Before</p>
+
+    <h1 id="heading">Goodbye</h1>
+
+    <p>After</p>
+
+    <script>
+      setTimeout(function() {
+        document.getElementById('heading').classList.add('s-fade-out');
+      }, 2000);
+    </script>
+  </body>
+</html>
