@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		.s-search-pulse {
+			animation: 1.5s linear infinite alternate pulse;
+		}
+		@keyframes pulse {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+		</style>
+	</head>
+
+	<body>
+		<p id="message" class="s-search-pulse">Searching...</p>
+
+		<script>
+			const message = document.getElementById("message");
+			message.addEventListener('click', function() {
+				message.classList.toggle('s-search-pulse');
+			});
+		</script>
+	</body>
+</html>
