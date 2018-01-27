@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			.app {
+				display: grid;
+				grid-template-columns: 40% 30% 30%;
+				grid-template-rows: auto;
+
+				grid-template-areas:
+					"header header header"
+					"editor raw-preview preview"
+					"footer footer footer";
+			}
+
+			.header {
+				grid-area: header;
+			}
+
+			.editor {
+				grid-area: editor;
+			}
+
+			.raw-preview {
+				grid-area: raw-preview
+			}
+
+			.rendered-preview {
+				grid-area: preview;
+			}
+
+			.footer {
+				grid-area: footer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<main class="app">
+			<header class="header">
+				<p>Editor</p>
+			</header>
+
+
+			<div class="editor">
+				<textarea></textarea>
+			</div>
+			<div id="raw-preview" class="preview raw-preview">
+				<pre>Some Markdown</pre> 
+			</div>
+			<div id="rendered-preview" class="preview rendered-preview">
+				<p>Some HTML</p>
+			</div>
+
+			<footer class="footer">
+				<p>Footer</p>
+			</footer>
+		</main>
+	</body>
+</html>
